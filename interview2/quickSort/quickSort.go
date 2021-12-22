@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"sort"
 )
 
 func quickSortV1(arr []int, low, hight int) {
@@ -70,6 +69,7 @@ func quickSort(arr []int, left, right int) {
 }
 
 func quicksort2(arr []int, left, right int) {
+
 	if left < right {
 		j := left
 		pivot := arr[left]
@@ -77,14 +77,15 @@ func quicksort2(arr []int, left, right int) {
 			if arr[i] < pivot {
 				j++
 				arr[i], arr[j] = arr[j], arr[i]
-
 			}
-
 		}
-		arr[left], arr[j] = arr[j], arr[left]
+
+		arr[j], arr[left] = arr[left], arr[j]
 		quicksort2(arr, left, j)
 		quicksort2(arr, j+1, right)
+
 	}
+
 }
 
 func main() {
@@ -92,14 +93,14 @@ func main() {
 	//arr:=[]int{10,9,18,7,16,5,4,3,2,1,1}
 	//arr := []int{3,2,1,10,11,1}
 	//quickSortV1(arr, 0, len(arr)-1)
-	//quicksort2(arr,0,len(arr))
+	quicksort2(arr, 0, len(arr))
 	//arr = sort.Ints(arr)
-	//fmt.Println(arr)
+	fmt.Println(arr)
 
-	ls := sort.IntSlice(arr)
-	fmt.Println(ls) //[1 4 5 3 2]
-	sort.Ints(ls)
-	fmt.Println(ls) //[1 2 3 4 5]
+	//ls := sort.IntSlice(arr)
+	//fmt.Println(ls) //[1 4 5 3 2]
+	//sort.Ints(ls)
+	//fmt.Println(ls) //[1 2 3 4 5]
 
 }
 
