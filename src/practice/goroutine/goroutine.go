@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	for i := 0; i < 1000; i++ {
+	for i := 0; i < 10; i++ {
 		go func(i int) {
 			for {
 				fmt.Printf("Hello from "+
@@ -14,5 +14,5 @@ func main() {
 			}
 		}(i)
 	}
-	time.Sleep(time.Minute)
+	time.Sleep(time.Millisecond)
 }
