@@ -8,7 +8,7 @@ type ListNode struct {
 }
 
 func main() {
-	one := makeListNode([]int{1, 2, 3, 5, 6, 7, 7, 2, 34, 2, 1})
+	one := MakeListNode([]int{1, 2, 3, 5, 6, 7, 7, 2, 34, 2, 1})
 	for one != nil {
 		if one.Next == nil {
 			fmt.Println(one.Value)
@@ -19,7 +19,7 @@ func main() {
 	}
 }
 
-func makeListNode(nums []int) *ListNode {
+func MakeListNode(nums []int) *ListNode {
 
 	if len(nums) == 0 {
 		return nil
