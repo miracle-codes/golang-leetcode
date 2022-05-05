@@ -1,8 +1,8 @@
 package main
 
 import (
-	"leetcode2022/makeList"
-	"leetcode2022/showList"
+	"leetcode2022/func/makeList"
+	"leetcode2022/func/showList"
 )
 
 func main() {

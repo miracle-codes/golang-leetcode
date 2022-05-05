@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-import "leetcode2022/makeList"
+import "leetcode2022/func/makeList"
 
 func main() {
 	arr := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
