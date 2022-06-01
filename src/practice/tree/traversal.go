@@ -14,8 +14,8 @@ func (node *Node) TraverseFunc(f func(*Node)) {
 		return
 	}
 
-	node.Left.TraverseFunc(f)
 	f(node)
+	node.Left.TraverseFunc(f)
 	node.Right.TraverseFunc(f)
 }
 
